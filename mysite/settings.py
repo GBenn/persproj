@@ -99,10 +99,10 @@ if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '/cloudsql/<your-cloudsql-connection-string>',
-            'NAME': 'polls',
-            'USER': '<your-database-user>',
-            'PASSWORD': '<your-database-password>',
+            'HOST': '/cloudsql/perfect-operand-166616:europe-west1:mysql01',
+            'NAME': 'pollsdb',
+            'USER': 'django-poll-user',
+            'PASSWORD': 'Pa55w0rd',
         }
     }
 else:
@@ -117,9 +117,9 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1',
             'PORT': '3306',
-            'NAME': 'polls',
-            'USER': '<your-database-user>',
-            'PASSWORD': '<your-database-password>',
+            'NAME': 'pollsdb',
+            'USER': 'django-poll-user',
+            'PASSWORD': 'Pa55w0rd',
         }
     }
 # [END db_setup]
